@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Metodos de planificación</title>
+</head>
+
+<body class="bg-dark bg-gradient text-light vh-100">
+    <div class="container">
+        <div class="content-title">
+            <h1>Algoritmos de planificación</h1>
+        </div>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><button id="FCFS" class="nav-link">FCFS</button></li>
+                <li class="nav-item"><button id="SJF" class="nav-link">SJF</button></li>
+                <li class="nav-item"><button id="SRTF" class="nav-link">SRTF</button></li>
+                <li class="nav-item"><button id="RR" class="nav-link">RR</button></li>
+            </ul>
+        </nav>
+        <div class="input-data">
+            <div class="content-data">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="name" class="form-label">Nombre del proceso</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="time" class="form-label">Tiempo de llegada</label>
+                        <input type="number" name="time" id="time" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="processing-time" class="form-label">Tiempo de procesamiento</label>
+                        <input type="number" name="processing-time" id="processing-time" class="form-control">
+                    </div>
+                </div>
+                <button id="save" class="btn btn-primary mt-2">Guardar</button>
+            </div>
+            <div class="content-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tiempo de llegada</th>
+                            <th>Duración</th>
+                        </tr>
+                    </thead>
+                    <tbody id="t-body">
+                        <tr>
+                            <td colspan="3" align="center">Sin datos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="chart">
+            <canvas class="proccess" id="chart"></canvas>
+        </div>
+        <div class="summaryTable">
+            <table class="table" id="summaryTable">
+
+            </table>
+        </div>
+    </div>
+    <script type="module" src="assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
